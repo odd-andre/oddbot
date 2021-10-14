@@ -24,7 +24,9 @@ cogs = [music, helper]
 for i in range(len(cogs)):
     cogs[i].setup(client)
 
-token = 'ODk3ODM1MDUwMzA4MTA0MjUy.YWbcDA.GpQoVIlWdzZsSyC2_N_umNzaKO8'
+with open('settings.json','r') as file:
+    settings = json.load(file)
+token = settings['token']
 
 
 @client.event
