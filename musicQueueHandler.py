@@ -3,6 +3,7 @@ import random
 
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+# consider replacing with yt-dlp
 import youtube_dl
 
 YDL_OPTIONS = {'format': 'bestaudio'}

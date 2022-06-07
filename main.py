@@ -24,7 +24,7 @@ cogs = [music, helper]
 for i in range(len(cogs)):
     cogs[i].setup(client)
 
-with open('settings.json','r') as file:
+with open('setting.json','r') as file:
     settings = json.load(file)
 token = settings['token']
 

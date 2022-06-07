@@ -8,7 +8,8 @@ class Music(commands.Cog):
     def __init__(self, client):
         self.client = client
         self.queue = musicQueueHandler.queueHandler()
-        self.ffmpegOptions = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
+        # -af anequalizer=c0 f=200 w=100 g=-10 t=1|c1 f=200 w=100 g=-10 t=1
+        self.ffmpegOptions = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn -c:a libopus -b:a 96k'}
 
 
     @commands.command(help='use !play [url] to play a song, only youtube and needs to be an url, it can be a playlist url tho', aliases=['p'])
